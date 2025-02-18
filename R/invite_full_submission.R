@@ -7,6 +7,8 @@ Dear @{handle}, thanks for sharing your work with rOpenSci, and for starting wit
 
 We welcome your full submission. Please take your time to read our [Guide for authors]({guide_url}).
 
+Now some general recommendations to consider.
+
 The handling editor's intent is to help you go through the peer-review process as quickly and smoothly as possible. For that they'll look for opportunities to make the best out of the limited reviewer's time. The goal is to shape the package so that reviewers can understand and test it as completely and quickly as possible.
 
 For example it helps to have:
