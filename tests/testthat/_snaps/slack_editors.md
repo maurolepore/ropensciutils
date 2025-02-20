@@ -3,7 +3,7 @@
     Code
       slack_editors()
     Output
-      Dear @editors we have a new standard submission under the category 'workflow automation' (description below). 
+      Dear @editors we have a new standard submission under the category 'workflow automation' (description below).
       
       'coolr' does cool things in R. I believe it's in scope because it streamlines necessary processes.
       

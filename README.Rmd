@@ -33,4 +33,20 @@ devtools::install_github("maurolepore/ropensciutils")
 
 ```{r}
 library(ropensciutils)
+
+editor_template()
+
+formals(slack_editors)
+```
+
+```{r}
+#| comment: ""
+# Using `#| comment: ""`
+slack_editors()
+```
+
+Includes apps
+
+```{r}
+if (interactive()) app_email_reviewer()
 ```
