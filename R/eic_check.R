@@ -1,6 +1,6 @@
 eic_check <- function(handle = "johndoe") {
   header <- eic_template_header()
-  glue::glue(header, editor_template())
+  glue::glue(header, editor_template_impl())
 }
 
 eic_template_header <- function() {

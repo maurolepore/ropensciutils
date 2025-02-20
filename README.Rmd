@@ -34,7 +34,7 @@ devtools::install_github("maurolepore/ropensciutils")
 ```{r}
 library(ropensciutils)
 
-editor_template()
+editor_template_impl()
 
 formals(slack_editors)
 ```

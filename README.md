@@ -24,7 +24,7 @@ devtools::install_github("maurolepore/ropensciutils")
 ``` r
 library(ropensciutils)
 
-editor_template()
+editor_template_impl()
 #> ### Editor checks:
 #> 
 #> - [ ] **Documentation**: The package has sufficient documentation available online (README, pkgdown docs) to allow for an assessment of functionality and scope without installing the package. In particular,

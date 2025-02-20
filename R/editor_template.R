@@ -8,6 +8,10 @@
 #' @examples
 #' editor_template()
 editor_template <- function() {
+  glue::glue(editor_template_impl())
+}
+
+editor_template_impl <- function() {
   "
   ### Checks:
 
