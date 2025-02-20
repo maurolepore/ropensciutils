@@ -7,6 +7,7 @@ Authors@R:
 Description: What the package does (one paragraph).
 License: MIT + file LICENSE
 Imports: 
+    glue,
     shiny
 Suggests: 
     testthat (>= 3.0.0)
