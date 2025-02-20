@@ -2,6 +2,7 @@
 % Please edit documentation in R/email_reviewer.R
 \name{email_reviewer}
 \alias{email_reviewer}
+\alias{app_email_reviewer}
 \title{Draft email for a potential reviewer}
 \usage{
 email_reviewer(
@@ -13,6 +14,8 @@ email_reviewer(
   package_repo_url = "https://github.com/jhondoe/coolr",
   package_review_issue_url = "https://github.com/ropensci/software-review/issues/000"
 )
+
+app_email_reviewer()
 }
 \arguments{
 \item{reviewer_name}{Reviewer's name.}

@@ -44,6 +44,8 @@ email_reviewer <- function(
   [rOpenSci forum]: https://discuss.ropensci.org/")
 }
 
+#' @export
+#' @rdname email_reviewer
 app_email_reviewer <- function() {
   ui <- fluidPage(
     titlePanel("Email Reviewer"),

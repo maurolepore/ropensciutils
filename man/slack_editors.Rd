@@ -2,6 +2,7 @@
 % Please edit documentation in R/slack_editors.R
 \name{slack_editors}
 \alias{slack_editors}
+\alias{app_slack_editors}
 \title{Generate email to editors for a new package submission}
 \usage{
 slack_editors(
@@ -19,6 +20,8 @@ slack_editors(
   category_description =
     "Tools that automate and link together workflows, such as build systems and tools to manage continuous integration. Does not include general tools for literate programming. (e.g., R markdown extensions not under the previous topics). (Example: drake)"
 )
+
+app_slack_editors()
 }
 \arguments{
 \item{package_review_issue_url}{URL of the package review issue.}

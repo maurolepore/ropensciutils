@@ -48,6 +48,8 @@ Else I'll come back here after a few days.
 ")
 }
 
+#' @export
+#' @rdname slack_editors
 app_slack_editors <- function() {
   ui <- fluidPage(
     titlePanel("Slack Editors"),
