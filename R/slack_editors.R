@@ -33,7 +33,7 @@ Dear @editors we have a new {type} submission under the {category} (description 
 
 '{package}' {package_does}. I believe it's in scope because {in_scope_because}.
 
-'pkgcheck' shows {package_check_shows}. And my own quick preliminary checks suggest {my_checks_show} ({my_checks_url}).
+'pkgcheck' shows {package_check_shows}. And my own quick [preliminary checks](my_checks_url) suggest {my_checks_show}.
 
 If you can take it please double-check it's in scope and of acceptable quality and feel free to disagree with my quick preliminary checks. Then please go ahead and assign yourself with `@ropensci-review-bot assign @username as editor`.
 
