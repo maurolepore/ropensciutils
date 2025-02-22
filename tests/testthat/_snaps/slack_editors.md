@@ -7,7 +7,7 @@
       
       'coolr' does cool things in R. I believe it's in scope because it streamlines necessary processes.
       
-      'pkgcheck' shows this package is in top shape. And my own quick preliminary checks suggest the package is awesome (https://github.com/ropensci/software-review/issues/000#issuecomment-0000000000).
+      'pkgcheck' shows this package is in top shape. And my own quick [preliminary checks](my_checks_url) suggest the package is awesome.
       
       If you can take it please double-check it's in scope and of acceptable quality and feel free to disagree with my quick preliminary checks. Then please go ahead and assign yourself with `@ropensci-review-bot assign @username as editor`.
       
