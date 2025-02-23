@@ -13,14 +13,16 @@
 #' @examples
 #' email_reviewer()
 email_reviewer <- function(
-    reviewer_name = "Jane Smith",
-    why_reviewer_fits = "of your experience developing cool things",
-    package = "coolr",
-    author_name = "John Doe",
-    package_does = "does cool things in R",
-    package_repo_url = "https://github.com/jhondoe/coolr",
-    package_review_issue_url = "https://github.com/ropensci/software-review/issues/000") {
-  glue::glue("rOpenSci: Invitation to review the package {package}
+  reviewer_name = "Jane Smith",
+  why_reviewer_fits = "of your experience developing cool things",
+  package = "coolr",
+  author_name = "John Doe",
+  package_does = "does cool things in R",
+  package_repo_url = "https://github.com/jhondoe/coolr",
+  package_review_issue_url = "https://github.com/ropensci/software-review/issues/000"
+) {
+  glue::glue(
+    "rOpenSci: Invitation to review the package {package}
 
   Dear {reviewer_name},
 
@@ -41,7 +43,8 @@ email_reviewer <- function(
   [packaging guide]: https://devguide.ropensci.org/building.html
   [template]: https://devguide.ropensci.org/reviewtemplate.html
   [conflict of interest]: https://devguide.ropensci.org/policies.html#coi
-  [rOpenSci forum]: https://discuss.ropensci.org/")
+  [rOpenSci forum]: https://discuss.ropensci.org/"
+  )
 }
 
 #' @export
@@ -52,12 +55,28 @@ app_email_reviewer <- function() {
     sidebarLayout(
       sidebarPanel(
         textInput("reviewer_name", "Reviewer's Name", value = "Jane Smith"),
-        textInput("why_reviewer_fits", "Why Reviewer Fits", value = "of your experience developing cool things"),
+        textInput(
+          "why_reviewer_fits",
+          "Why Reviewer Fits",
+          value = "of your experience developing cool things"
+        ),
         textInput("package", "Package", value = "coolr"),
         textInput("author_name", "Author's Name", value = "John Doe"),
-        textInput("package_does", "Package Does", value = "does cool things in R"),
-        textInput("package_repo_url", "Package Repo URL", value = "https://github.com/jhondoe/coolr"),
-        textInput("package_review_issue_url", "Package Review Issue URL", value = "https://github.com/ropensci/software-review/issues/000")
+        textInput(
+          "package_does",
+          "Package Does",
+          value = "does cool things in R"
+        ),
+        textInput(
+          "package_repo_url",
+          "Package Repo URL",
+          value = "https://github.com/jhondoe/coolr"
+        ),
+        textInput(
+          "package_review_issue_url",
+          "Package Review Issue URL",
+          value = "https://github.com/ropensci/software-review/issues/000"
+        )
       ),
       mainPanel(
         verbatimTextOutput("output")

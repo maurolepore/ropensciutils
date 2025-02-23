@@ -9,6 +9,9 @@ eic_check(handle = "johndoe")
 
 app_eic_check()
 }
+\arguments{
+\item{handle}{Character. The handle of the package author.}
+}
 \value{
 Text
 }

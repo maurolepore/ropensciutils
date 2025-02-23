@@ -3,6 +3,8 @@
 \name{slack_editors}
 \alias{slack_editors}
 \alias{app_slack_editors}
+\alias{tool_slack_editors}
+\alias{prompt_slack_editors}
 \title{Generate email to editors for a new package submission}
 \usage{
 slack_editors(
@@ -22,6 +24,10 @@ slack_editors(
 )
 
 app_slack_editors()
+
+tool_slack_editors()
+
+prompt_slack_editors()
 }
 \arguments{
 \item{package_review_issue_url}{URL of the package review issue.}
@@ -54,4 +60,6 @@ Generate email to editors for a new package submission
 }
 \examples{
 slack_editors()
+tool_slack_editors()
+prompt_slack_editors()
 }

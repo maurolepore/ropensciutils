@@ -7,10 +7,16 @@
 \usage{
 invite_full_submission(
   handle = "johndoe",
-  guide_url = "https://devdevguide.netlify.app/softwarereview_author"
+  guide_url = c("https://devdevguide.netlify.app/softwarereview_author",
+    "https://stats-devguide.ropensci.org/pkgdev.html")
 )
 
 app_invite_full_submission()
+}
+\arguments{
+\item{handle}{Character. The handle of the package author.}
+
+\item{guide_url}{Character. The URL of the guide for authors.}
 }
 \value{
 Text

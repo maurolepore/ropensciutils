@@ -3,6 +3,8 @@
 #' As the EiC create the first comment following a (pre) submission, including
 #' a template for preliminary editor checks.
 #'
+#' @inheritParams invite_full_submission
+#'
 #' @return Text
 #' @export
 #'
