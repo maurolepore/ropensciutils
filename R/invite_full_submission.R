@@ -10,9 +10,10 @@
 #'
 #' if (interactive()) app_invite_full_submission()
 invite_full_submission <- function(
-    handle = "johndoe",
-    # guide_url = "https://stats-devguide.ropensci.org/pkgdev.html"
-    guide_url = "https://devdevguide.netlify.app/softwarereview_author") {
+  handle = "johndoe",
+  # guide_url = "https://stats-devguide.ropensci.org/pkgdev.html"
+  guide_url = "https://devdevguide.netlify.app/softwarereview_author"
+) {
   glue::glue(
     "
     Dear @{handle}, thanks for sharing your work with rOpenSci, and for starting with a pre-submission.
@@ -44,7 +45,11 @@ app_invite_full_submission <- function() {
     sidebarLayout(
       sidebarPanel(
         textInput("handle", "Handle", value = "johndoe"),
-        textInput("guide_url", "Guide URL", value = "https://devdevguide.netlify.app/softwarereview_author")
+        textInput(
+          "guide_url",
+          "Guide URL",
+          value = "https://devdevguide.netlify.app/softwarereview_author"
+        )
       ),
       mainPanel(
         verbatimTextOutput("output")
