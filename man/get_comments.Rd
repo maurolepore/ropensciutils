@@ -16,5 +16,7 @@ A list of the issue
 Get an issue from ropensci/software-review
 }
 \examples{
-get_comments(168)
+\dontshow{if (FALSE) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+get_comments(688)
+\dontshow{\}) # examplesIf}
 }
