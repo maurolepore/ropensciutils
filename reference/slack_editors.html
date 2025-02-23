@@ -53,7 +53,11 @@
 <span>    <span class="st">"Tools that automate and link together workflows, such as build systems and tools to manage continuous integration. Does not include general tools for literate programming. (e.g., R markdown extensions not under the previous topics). (Example: drake)"</span></span>
 <span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu">app_slack_editors</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">app_slack_editors</span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">tool_slack_editors</span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">prompt_slack_editors</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -128,6 +132,67 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> - Repo: https://github.com/jhondoe/coolr</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &gt; category 'workflow automation': Tools that automate and link together workflows, such as build systems and tools to manage continuous integration. Does not include general tools for literate programming. (e.g., R markdown extensions not under the previous topics). (Example: drake) -- https://devguide.ropensci.org/softwarereview_policies.html#aims-and-scope</span>
+<span class="r-in"><span><span class="fu">tool_slack_editors</span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;ellmer::ToolDef&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  @ name       : chr "slack_editors"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  @ fun        : function (package_review_issue_url = "https://github.com/ropensci/software-review/issues/000", </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     package_repo_url = "https://github.com/jhondoe/coolr", type = "standard", </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     category = "category 'workflow automation'", package = "coolr", package_does = "does cool things in R", </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     package_check_shows = "this package is in top shape", in_scope_because = "it streamlines necessary processes", </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     my_checks_show = "the package is awesome", my_checks_url = "https://github.com/ropensci/software-review/issues/000#issuecomment-0000000000", </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     category_description = "Tools that automate and link together workflows, such as build systems and tools to manage continuous integration. Does not include general tools for literate programming. (e.g., R markdown extensions not under the previous topics). (Example: drake)")  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  @ description: chr "Generate a message for editors-only from comments in a review-issue passed as json"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  @ arguments  : &lt;ellmer::TypeObject&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. @ description          : NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. @ required             : logi TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. @ properties           :List of 11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. .. $ package_review_issue_url: &lt;ellmer::TypeBasic&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ description: chr "URL of the package review issue. Defaults to\n    'https://github.com/ropensci/software-review/issues/000'."</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ required   : logi FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ type       : chr "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. .. $ package_repo_url        : &lt;ellmer::TypeBasic&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ description: chr "URL of the package repository. Defaults to\n    'https://github.com/jhondoe/coolr'."</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ required   : logi FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ type       : chr "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. .. $ type                    : &lt;ellmer::TypeBasic&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ description: chr "Type of submission (e.g., 'standard'). Defaults to 'standard'."</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ required   : logi FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ type       : chr "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. .. $ category                : &lt;ellmer::TypeBasic&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ description: chr "Category of the package (e.g., 'workflow automation'). Defaults to\n    'category \"workflow automation\"'."</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ required   : logi FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ type       : chr "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. .. $ package                 : &lt;ellmer::TypeBasic&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ description: chr "Name of the package. Defaults to 'coolr'."</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ required   : logi FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ type       : chr "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. .. $ package_does            : &lt;ellmer::TypeBasic&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ description: chr "What the package does. Defaults to 'does cool things in R'."</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ required   : logi FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ type       : chr "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. .. $ package_check_shows     : &lt;ellmer::TypeBasic&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ description: chr "Summary of the package check results. Defaults to 'this package is\n    in top shape'."</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ required   : logi FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ type       : chr "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. .. $ in_scope_because        : &lt;ellmer::TypeBasic&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ description: chr "Reason why the package is in scope. Defaults to 'it streamlines\n    necessary processes'."</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ required   : logi FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ type       : chr "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. .. $ my_checks_show          : &lt;ellmer::TypeBasic&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ description: chr "Summary of the preliminary checks performed. Defaults to 'the\n    package is awesome'."</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ required   : logi FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ type       : chr "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. .. $ my_checks_url           : &lt;ellmer::TypeBasic&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ description: chr "URL to the detailed preliminary checks. Defaults to\n    'https://github.com/ropensci/software-review/issues/00"| __truncated__</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ required   : logi FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ type       : chr "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. .. $ category_description    : &lt;ellmer::TypeBasic&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ description: chr "Description of the category. Defaults to 'Tools that automate and\n    link together workflows, such as build s"| __truncated__</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ required   : logi FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. ..  ..@ type       : chr "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  .. @ additional_properties: logi FALSE</span>
+<span class="r-in"><span><span class="fu">prompt_slack_editors</span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Generate a message for editors-only from the review-issue passed as json below. To find my checks look  towards the end of the thread for my handle: maurolepore. Highlight the potential issues I flag under unchecked boxes:"</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

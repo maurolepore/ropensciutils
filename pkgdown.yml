@@ -2,7 +2,7 @@ pandoc: 3.1.11
 pkgdown: 2.1.1
 pkgdown_sha: ~
 articles: {}
-last_built: 2025-02-21T00:36Z
+last_built: 2025-02-23T02:54Z
 urls:
   reference: https://maurolepore.github.io/ropensciutils/reference
   article: https://maurolepore.github.io/ropensciutils/articles
